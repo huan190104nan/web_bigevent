@@ -27,7 +27,7 @@ $(function () {
             var pwd = $('.reg [name=password]').val()
             console.log(pwd);
             if (pwd !== value) {
-                return layer.msg('2次输入的密码不一致');
+                return '2次输入的密码不一致'
             }
         }
     })
