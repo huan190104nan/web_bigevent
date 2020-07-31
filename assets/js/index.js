@@ -28,7 +28,7 @@ function getUerInfo() {
             if (res.status !== 0) {
                 return layui.layer.msg('获取信息失败')
             }
-            console.log(res);
+            // console.log(res);
             //获取成功之后渲染头像
             renderAvatar(res.data)
         }
@@ -44,7 +44,7 @@ function renderAvatar(user) {
     $('#welcome').html('欢迎' + name)
     if (user.user_pic !== null) {
         //给图片的src将获取到的头像地址赋值,并且显示
-        $('.layui-nav-img').attr('src', user.user_pi).show()
+        $('.layui-nav-img').attr('src', user.user_pic).show()
         //文本头像隐藏
         $('.text_avatar').hide()
     } else {

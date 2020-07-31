@@ -13,7 +13,7 @@ $.ajaxPrefilter(function (options) {
 
     //用户没有登录的话是不能进入后台主页,强制返回到登录页面
     options.complete = function (res) {
-        console.log(res);
+        // console.log(res);
         if (res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败！') {
             //清空本地存储的token
             localStorage.removeItem('token')
